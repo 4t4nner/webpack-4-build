@@ -1,0 +1,25 @@
+//@mixin default-transition() {
+//  transition: all 0.3s ease;
+//}
+//
+//
+//@mixin link-hvr($color:#ffffff) {
+//  display: inline-block;
+//
+//  &:hover, &:active, &:focus {
+//    text-decoration: none;
+//  }
+//
+//  &:after {
+//    display: block;
+//    content: "";
+//    height: 2px;
+//    width: 0;
+//    background-color: $color;
+//    @include default-transition();
+//  }
+//
+//  &:hover:after {
+//    width: 100%;
+//  }
+//}
