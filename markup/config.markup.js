@@ -55,14 +55,15 @@ module.exports = {
         build: "./build/"
     },
     html: {
-        src: "./src/html/*.html, ./src/html/**/*.html",
-        watch: "./src/**/*.html, ./src/html/**/*.html",
+        src: ['./src/html/**/*.html','./src/*.html',],
+        watch: ['./src/html/**/*.html','./src/*.html',],
         build: "./build/"
     },
     fonts: {
         src: [
             './src/fonts/**/*',
-            './node_modules/bootstrap-sass/assets/fonts/**/*'
+            './node_modules/bootstrap-sass/assets/fonts/**/*',
+            './node_modules/@fortawesome/fontawesome-free/**/fa-*.{eot,woff,woff2,svg}'
         ],
         watch: "./src/fonts/**/*",
         build: './build/assets/fonts',

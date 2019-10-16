@@ -1,5 +1,5 @@
 const gulp = require('gulp')
-const browser = require('browser-sync')
+const browser = require('browser-sync').create();
 const rimraf = require('rimraf')
 
 const config = require('./config.markup')
@@ -10,32 +10,28 @@ const getTask = function (task) {
 
 const scripts = getTask('scripts')
 const css = getTask('css')
+const html = getTask('html')
 const sass = getTask('sass')
 const pictures = getTask('pictures')
 const images = getTask('images')
 const fonts = getTask('fonts')
 
-
-const build = gulp.parallel(scripts, css, sass, fonts, images, pictures)
+const build = gulp.parallel(scripts, css, sass, fonts, images, html, pictures)
 gulp.task('build', build)
 
-const parseConfig = c => {
-	if(Array.isArray(c)){
-		return c
-	}
-	return [c]
-}
+gulp.task('browser-sync', () => browser.init(config.browser));
 
-gulp.task(
-	'watch', () => {
-		gulp.watch([config.sass.watch], sass)
-		gulp.watch([config.css.watch], css)
-		gulp.watch(config.scripts.watch, scripts)
-		gulp.watch([config.images.watch], images)
-		gulp.watch([config.pictures.watch], pictures)
-		gulp.watch([config.fonts.watch], fonts)
-	}
-)
+const watch = gulp.parallel(() => {
+	gulp.watch([config.sass.watch], sass)
+	gulp.watch([config.css.watch], css)
+	gulp.watch(config.scripts.watch, scripts)
+	gulp.watch([config.images.watch], images)
+	gulp.watch([config.pictures.watch], pictures)
+	gulp.watch([config.fonts.watch], fonts)
+	gulp.watch(config.html.watch, html)
+},'browser-sync')
+
+gulp.task('watch',watch)
 
 gulp.task('clean', cb => rimraf(config.build, cb))
 

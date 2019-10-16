@@ -1,4 +1,8 @@
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-//@import "../../node_modules/fontawesome-scss/fontAwesome";
 
+
+@import "include/fontawesome";
 @import "include/default";
+
+
+
+@import "partials/header";

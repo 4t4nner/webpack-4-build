@@ -1,3 +1,30 @@
+@import "variables";
 @import "fonts";
 @import "mixins";
-@import "variables";
+
+@import "bootstrap";
+
+body{
+	font-family: $font-clearSans;
+}
+
+.display-only{
+	@media (max-width: $screen-lg - 0.02) {
+		display: none;
+	}
+}
+.mr-auto, .mx-auto {
+	margin-right: auto!important;
+}
+
+*, ::after, ::before {
+	box-sizing: border-box;
+}
+
+button {
+	background-color: unset;
+	border-width:0;
+	font-size:20px;
+	padding: 4px 12px ;
+	text-align:center;
+}
