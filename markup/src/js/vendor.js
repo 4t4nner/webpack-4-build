@@ -1,3 +1,5 @@
 // vendor.js
+'use strict';
+
 @@include('../../node_modules/jquery/dist/jquery.js');
-@@include('../../node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js');
+@@include('../../node_modules/bootstrap/dist/js/bootstrap.js');

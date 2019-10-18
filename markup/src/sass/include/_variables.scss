@@ -1,7 +1,27 @@
-$container-desktop: 1000px;
-$container-large-desktop: 1000px;
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 1030px,
+	xl: 1030.00001px // for no-warning
+) !default;
 
-@import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+$red: #e31e24;
+$yellow: #fce41c;
+$blue: #144c96;
+$grey: #6c717f;
+$green: #a4c439;
+$padding-y:14px;
+$padding-x: 28px;
+$blackTransp5: rgba(0,0,0,0.5);
+$theme-colors: (
+	"grey":       $grey,
+);
+$colors: (
+	"grey":       #6c717f,
+	"black":       #000,
+);
+@import "../../../node_modules/bootstrap/scss/variables";
 
 $grey1: #6c717f;
 $red1:  #e31e24;;
+

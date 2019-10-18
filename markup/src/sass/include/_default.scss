@@ -1,4 +1,4 @@
-@import "variables";
+
 @import "fonts";
 @import "mixins";
 
@@ -6,10 +6,17 @@
 
 body{
 	font-family: $font-clearSans;
+	color: #000000;
 }
 
 .display-only{
-	@media (max-width: $screen-lg - 0.02) {
+	@include media-breakpoint-down(lg){
+		display: none;
+	}
+}
+
+.mobile-only{
+	@include media-breakpoint-up(lg){
 		display: none;
 	}
 }
@@ -21,10 +28,85 @@ body{
 	box-sizing: border-box;
 }
 
+.f-24,._f-24{
+	line-height: 1.25;
+	font-size: 24px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	letter-spacing: normal;
+}
+._f-18{
+	font-size: 18px;
+	line-height: 1.33;
+}
+
+._m-19{
+	margin-bottom: 19px;
+}
+.p-b-24{
+	padding-bottom: 24px;
+}
+.black-transp5{
+	color: $blackTransp5;
+}
+
 button {
 	background-color: unset;
 	border-width:0;
 	font-size:20px;
-	padding: 4px 12px ;
+	padding: 4px 9px ;
 	text-align:center;
+	outline: none;
 }
+.btn{
+	padding: 14px 28px;
+	border-radius: 30px;
+	&_24{
+		@extend .f-24;
+	}
+
+}
+
+
+h1{
+	font-size: 72px;
+	font-weight: bold;
+	line-height: 80px;
+
+	small{
+		font-size: 36px;
+		font-weight: normal;
+		line-height: 0.83;
+	}
+
+	&.h1{
+		&_top20{
+			margin-top: 20px;
+		}
+	}
+}
+
+iframe{
+	.media-preview{
+		max-width: 100%;
+	}
+}
+
+@include media-breakpoint-down(lg){
+
+	h1{
+		font-size: 38px;
+		font-weight: bold;
+		line-height: 1;
+
+		small{
+			font-size: 24px;
+			font-weight: normal;
+			line-height: .83;
+
+		}
+	}
+
+}
+
