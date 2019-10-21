@@ -47,10 +47,10 @@ module.exports = {
     },
     fonts: {
         src: [
-            './src/fonts/**/*',
+            './src/fonts/**/**.{woff,ttf,eot,svg}',
             './node_modules/bootstrap-sass/assets/fonts/**/*'
         ],
-        watch: "./src/fonts/**/*",
+        watch: "./src/fonts/**/*.{woff,ttf,eot,svg}",
         build: "../src/frontend/web/assets/fonts/",
         formats: "woff ttf eot svg"
     },

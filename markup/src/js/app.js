@@ -1,4 +1,4 @@
 // app.js
 @@include('./vendor.js');
-@@include('./partials/burger-menu.js');
+@@include('./partials/index-page.js');
 

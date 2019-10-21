@@ -39,6 +39,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
     "gulp.spritesmith": "^6.11.0",
+    "icon-font-generator": "^2.1.10",
     "imagemin-pngquant": "^8.0.0",
     "jquery-ui": "^1.12.1",
     "lazypipe": "^1.0.2",
