@@ -5,7 +5,7 @@ npm-i:
 	cd $(MARKUP) && npm i && cd $(CURDIR)
 
 npm-build:
-	cd $(MARKUP) && npm run build && $(CURDIR)
+	cd $(MARKUP) && npm run build
 
 pull:
 	git pull
