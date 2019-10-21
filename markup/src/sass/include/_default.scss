@@ -87,11 +87,21 @@ h1{
 	}
 }
 
-iframe{
-	.media-preview{
-		max-width: 100%;
-	}
+h2{
+	font-size: 36px;
+	font-weight: bold;
+	line-height: 2.22;
+	letter-spacing: 0.6px;
 }
+h3{
+	font-size: 36px;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 0.67;
+	letter-spacing: normal;
+	font-weight: 600;
+}
+
 
 @include media-breakpoint-down(lg){
 
@@ -110,3 +120,9 @@ iframe{
 
 }
 
+
+iframe{
+	.media-preview{
+		max-width: 100%;
+	}
+}

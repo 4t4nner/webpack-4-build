@@ -17,7 +17,7 @@ $theme-colors: (
 	"grey":       $grey,
 );
 $colors: (
-	"grey":       #6c717f,
+	"grey":       $grey,
 	"black":       #000,
 );
 @import "../../../node_modules/bootstrap/scss/variables";
