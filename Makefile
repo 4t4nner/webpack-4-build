@@ -10,6 +10,6 @@ npm-build:
 pull:
 	git pull
 
-deploy: pull && npm-i && npm-build
+deploy: pull npm-i npm-build
 
 
