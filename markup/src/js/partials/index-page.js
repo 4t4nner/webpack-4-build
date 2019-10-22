@@ -4,9 +4,6 @@ $(function () {
     "use strict";
     var $document = $(document);
 
-    console.log(1)
-    // $document.on('focusout','#index-page .features__list .link',function(){
-    // })
     $document.on('click','#index-page .features__list .link',function(){
         const $this = $(this)
         if($this.hasClass('clicked')){

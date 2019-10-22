@@ -28,6 +28,9 @@ body{
 	box-sizing: border-box;
 }
 
+.bold{
+	font-weight: 700;
+}
 .f-24,._f-24{
 	line-height: 1.25;
 	font-size: 24px;
@@ -35,10 +38,18 @@ body{
 	font-stretch: normal;
 	font-style: normal;
 	letter-spacing: normal;
+
+	&.bold{
+		font-weight: 600;
+	}
 }
 ._f-18{
 	font-size: 18px;
 	line-height: 1.33;
+}
+._f-16{
+	font-size: 16px;
+	line-height: normal;
 }
 
 ._m-19{

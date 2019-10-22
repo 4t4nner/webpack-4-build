@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "browser-sync": "gulp browser-sync",
+    "font-icon": "icon-font-generator src/svg-font-inputs/*.svg -p f-icon --types 'ttf, woff, woff2, eot' -o src/fonts/icon-font-generator  --cssfontsurl '/assets/fonts/icon-font-generator'",
     "build": "gulp build",
     "watch": "gulp watch",
     "start": "serve build",
@@ -56,6 +57,8 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "bootstrap-scss": "^4.3.1",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0",
+    "swiper": "^5.1.0"
   }
 }

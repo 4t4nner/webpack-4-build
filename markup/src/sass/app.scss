@@ -2,8 +2,10 @@
 
 @import "include/fontawesome";
 @import "include/default";
-
-
+@import "../../node_modules/swiper/css/swiper";
+@import "partials/swiper";
 
 @import "partials/header";
+@import "partials/footer";
 @import "partials/index-page";
+

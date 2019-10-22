@@ -1,0 +1,55 @@
+:root{
+	--swiper-navigation-color: #{$red};
+	--swiper-theme-color: #{$red};
+	--swiper-navigation-size: 60px;
+}
+$swiper-pagination-bullet-size: 16px;
+
+.swiper{
+
+	position: relative;
+
+	.swiper-container{
+		.swiper-pagination-bullets{
+			bottom: -1px;
+			.swiper-pagination-bullet{
+				margin: 0 10px;
+			}
+		}
+	}
+	&-pagination{
+		&-bullet{
+			width: $swiper-pagination-bullet-size;
+			height: $swiper-pagination-bullet-size;
+			border: solid 1px $grey;
+			background: transparent;
+			&-active{
+				background-color: $red;
+			}
+		}
+		&-bullets{
+		}
+	}
+	&-button{
+		top: calc(50% - 20px);
+		height: 63px;
+		width: 30px;
+		&:after{
+			font-size: 51px;
+		}
+		&:focus{
+			outline: none;
+		}
+
+		&-prev{
+			left: -78px;
+		}
+		&-next{
+			right: -78px;
+		}
+		&-disabled{
+
+		}
+	}
+}
+

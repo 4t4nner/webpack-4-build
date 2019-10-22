@@ -1,9 +1,9 @@
 @font-face {
     font-family: "icons";
-    src: url("/assets/fonts/icon-font-generator/icons.eot?22999f760971b74235d22d71de4b23c3?#iefix") format("embedded-opentype"),
-url("/assets/fonts/icon-font-generator/icons.woff2?22999f760971b74235d22d71de4b23c3") format("woff2"),
-url("/assets/fonts/icon-font-generator/icons.woff?22999f760971b74235d22d71de4b23c3") format("woff"),
-url("/assets/fonts/icon-font-generator/icons.ttf?22999f760971b74235d22d71de4b23c3") format("truetype");
+    src: url("/assets/fonts/icon-font-generator/icons.eot?d66a92dae25c898af45060ecd39bcb49?#iefix") format("embedded-opentype"),
+url("/assets/fonts/icon-font-generator/icons.woff2?d66a92dae25c898af45060ecd39bcb49") format("woff2"),
+url("/assets/fonts/icon-font-generator/icons.woff?d66a92dae25c898af45060ecd39bcb49") format("woff"),
+url("/assets/fonts/icon-font-generator/icons.ttf?d66a92dae25c898af45060ecd39bcb49") format("truetype");
 }
 
 i[class^="f-icon-"]:before, i[class*=" f-icon-"]:before {
@@ -17,6 +17,9 @@ i[class^="f-icon-"]:before, i[class*=" f-icon-"]:before {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.f-icon-fa-plus-circle:before {
+.f-icon-fa-map-marker-alt:before {
     content: "\f101";
+}
+.f-icon-fa-plus-circle:before {
+    content: "\f102";
 }
