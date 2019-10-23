@@ -30,7 +30,7 @@ $(function () {
 			$sContainer.data()
 		)
 
-		return new Swiper('.swiper-container', params)
+		return new Swiper(sContainer, params)
 	})
 
 });

@@ -1,6 +1,19 @@
 
 #index-page{
 	overflow: hidden;
+
+
+	@include media-breakpoint-down(sm){
+		h1{
+
+			font-size: 28px;
+			font-weight: bold;
+			line-height: normal;
+			letter-spacing: normal;
+
+			text-align: center;
+		}
+	}
 }
 
 
@@ -19,7 +32,7 @@
 		height: 43px;
 	}
 	.title{
-		margin: 0 51px 0 14px;
+		margin: 0;
 		font-size: 24px;
 		line-height: 1.25;
 	}
@@ -33,6 +46,30 @@
 			text-decoration: none;
 		}
 	}
+
+	.row{
+		flex-wrap: nowrap;
+	}
+	.col{
+		flex-grow: 0;
+		flex-shrink: 0;
+	}
+	&__col-1{
+		flex-basis: 250px;
+	}
+	&__col-2{
+		flex: 1 1 auto !important;
+	}
+	&__col-3{
+		flex-basis: 143px;
+	}
+
+	@include media-breakpoint-down(lg){
+		.row{
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
 }
 
 .number-list{
@@ -43,6 +80,19 @@
 
 	@include media-breakpoint-down(lg){
 		flex-wrap: wrap;
+		justify-content: center;
+		.number-item{
+			flex-basis: 100%;
+			margin-bottom: 30px;
+		}
+	}
+
+	@include media-breakpoint-between(sm,lg){
+
+
+	}
+
+	@include media-breakpoint-down(sm){
 	}
 
 	.number-item{
@@ -142,6 +192,9 @@ section.smartsort-1 {
 
 	padding: 0 $grid-gutter-width/2 116px $grid-gutter-width/2;
 
+	@include media-breakpoint-down(sm){
+		padding-bottom: 50px;
+	}
 	@include media-breakpoint-down(xs){
 		.text-col {
 			padding-top: 30px;
@@ -189,6 +242,28 @@ section.smartsort-1 {
 }
 
 section.agritechnica{
+	@include media-breakpoint-down(sm){
+		padding-top: 0;
+
+		.col-video{
+			max-width: 100%;
+			flex-basis: 100%;
+
+			.media-preview{
+				max-width: 100%;
+			}
+		}
+
+
+		.signup{
+			.btn{
+				max-width: 100%;
+				font-size: 18px;
+				line-height: normal;
+			}
+		}
+	}
+
 	padding: 92px 0 60px 0;
 	.top-description{
 		max-width: 551px;
@@ -205,6 +280,10 @@ section.agritechnica{
 	.col-text{
 		max-width: 598px;
 		flex: 2 0 0;
+
+		h1{
+			text-align: left !important;
+		}
 	}
 	.col-video{
 		max-width: unset;
@@ -244,6 +323,32 @@ section.agritechnica{
 
 
 section.agritechnica2{
+
+
+	@include media-breakpoint-down(sm){
+		.top .col,.theme{
+			text-align: center;
+		}
+
+
+		.address{
+			padding-left: 15px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+
+			svg{
+				margin-bottom: 15px;
+			}
+		}
+	}
+	/*
+
+    display: flex;
+    justify-content: center;
+	 */
+	background-color: $blue;
 	padding: 80px 0 51px 0;
 
 	color: $white;
@@ -298,6 +403,12 @@ section.agritechnica2{
 
 section.accuracy{
 	padding: 95px 0 95px 0;
+
+	.accuracy__top-text{
+		@include media-breakpoint-down(sm){
+			text-align: center;
+		}
+	}
 
 	.icon-block{
 		margin-top: 29px;
@@ -393,12 +504,29 @@ section.accuracy{
 
 section.advantages{
 	padding-bottom: 101px;
+
+	@include media-breakpoint-down(sm){
+		h1,.item__icon{
+			width: 100%;
+			text-align: center;
+		}
+
+	}
 	.advantages__list{
 		padding: 48px 0 0 0;
 		.advantages__item{
 			@extend .col-md-4;
 			@extend .col-sm-12;
 
+			@include media-breakpoint-down(sm){
+				margin-bottom: 50px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+				.title{
+
+				}
+			}
 			.item__icon{
 				height: 104px;
 				svg{
@@ -421,9 +549,16 @@ section.advantages{
 }
 
 section.features{
+	background-color: $yellow;
 	min-height: 1269px;
 	color: $black;
 	z-index: 1;
+
+	@include media-breakpoint-down(sm){
+		.features__list{
+			flex-wrap: wrap;
+		}
+	}
 
 	.image-1{
 		position: relative;
@@ -578,9 +713,56 @@ section.read-more{
 				align-items: center;
 				border-radius: 30px;
 				max-width: calc(100% - 600px);
+
+
+				@include media-breakpoint-down(lg){
+					//min-width: ;
+
+					.btn{
+						font-size: 18px;
+						line-height: normal;
+
+					}
+				}
 			}
 		}
 
+		@include media-breakpoint-between(sm,lg) {
+			.col {
+				&.btn-container{
+					min-width: 185px;
+					.btn{
+						min-width: 185px;
+					}
+				}
+			}
+		}
+
+	}
+
+
+	@include media-breakpoint-down(sm){
+		h2{
+			text-align: center;
+		}
+		.row{
+
+			flex-wrap: wrap;
+			justify-content: center;
+			.col {
+				&.btn-container{
+					max-width: 100%;
+					width: 100%;
+					flex-basis: 100%;
+					display: flex;
+					justify-content: center;
+					.btn{
+						margin: 30px 0 0 0;
+						min-width: 185px;
+					}
+				}
+			}
+		}
 	}
 	.btn{
 		background: transparent;
@@ -621,11 +803,30 @@ section.sort-prod{
 			padding: 45px 0 6px 16px;
 		}
 	}
+
+	@include media-breakpoint-down(sm){
+		h1,h3{
+			text-align: center;
+		}
+		.sort-prod__list{
+			.row{
+				margin-bottom: 30px;
+			}
+			.item{
+				text-align: center;
+			}
+		}
+	}
 }
 
 section.results{
 	padding-top: 121px;
 	min-height: 1104px;
+
+
+	@include media-breakpoint-down(sm){
+		padding-top: 40px;
+	}
 
 	h1{
 		margin-bottom: 89px;
@@ -658,6 +859,7 @@ section.results{
 			width: 487px;
 			height: 200px;
 			border-radius: 15px;
+			max-width: 100%;
 		}
 
 		.arrow-btn{
@@ -692,8 +894,43 @@ section.about{
 	background: $grey;
 	color: $white;
 	padding-top: 89px;
+	padding-bottom: 50px;
 	min-height: 1189px;
 
+	.text1{
+		line-height: 1.25;
+		font-size: 24px;
+		font-weight: 700;
+	}
+	.text2 {
+		line-height: 22px;
+		padding-top: 5px;
+		letter-spacing: 0;
+	}
+
+	@include media-breakpoint-down(lg){
+		.media-preview{
+			width: 100%;
+			height: 50vw;
+			margin-bottom: 30px;
+		}
+
+		min-height: unset;
+	}
+
+	@include media-breakpoint-down(sm){
+
+		.text1{
+			margin-bottom: 15px;
+		}
+
+		.btn{
+			&-container{
+				text-align: center;
+			}
+			margin: 45px auto 0;
+		}
+	}
 	.circle{
 		z-index: 0;
 		color: rgba(255,255,255,0.14);
@@ -708,12 +945,6 @@ section.about{
 		width: 100%;
 		height: 560px;
 	}
-
-	.text2 {
-		line-height: 22px;
-		padding-top: 5px;
-		letter-spacing: 0px;
-	}
 	.btn{
 		margin-top: -41px;
 		padding: 14px 19px;
@@ -722,6 +953,36 @@ section.about{
 
 section.reviews{
 	padding-top: 100px;
+
+	@include media-breakpoint-down(sm){
+		.review__list{
+			.col-md-6+.col-md-6{
+				margin-top: 30px;
+			}
+			.text{
+				padding-top: 30px;
+			}
+		}
+		.img-col{
+			max-width: 100%;
+			flex-basis: 100%;
+		}
+		.swiper{
+			margin-top: 50px;
+			padding-bottom: 35px;
+			&-pagination{
+				bottom: -40px !important;
+				display: block;
+			}
+			max-width: 100%;
+
+			.media-preview{
+
+				max-height: 293px;
+				max-width: 100%;
+			}
+		}
+	}
 
 	h1{
 
@@ -781,6 +1042,9 @@ section.reviews{
 		width: 660px;
 		max-width: 660px;
 
+		&-pagination{
+			display: none;
+		}
 		&-button{
 			top: 50%;
 			height: 63px;
@@ -806,6 +1070,7 @@ section.reviews{
 		}
 		.swiper-slide{
 
+			height: auto;
 			display: flex;
 			.media-preview{
 				transform: scale(0.7);
@@ -820,7 +1085,6 @@ section.reviews{
 			}
 
 			&-active{
-				height: 369px !important;
 				.media-preview{
 					transform: none;
 				}
@@ -847,7 +1111,7 @@ section.reviews{
 }
 
 section.signup{
-	height: 828px;
+	//height: 828px;
 	background-color: $blue;
 	color: $white !important;
 
@@ -870,7 +1134,7 @@ section.signup{
 
 	.place{
 		.f-24{
-			margin-right: 36px;
+			//margin-right: 36px;
 		}
 		.how-to-get{
 			color: $white;
@@ -883,6 +1147,32 @@ section.signup{
 section.contacts{
 	padding: 50px 0 33px 0;
 
+	@include media-breakpoint-down(sm){
+
+		h2{
+			font-size: 24px;
+		}
+
+		.cities{
+			margin-bottom: 30px;
+			span{
+
+				font-size: 18px;
+				line-height: normal;
+			}
+			p{
+				margin-bottom: 10px;
+			}
+			.col-md-3{
+				margin-bottom: 15px;
+			}
+		}
+			/*
+
+		font-size: 18px;
+		line-height: normal;
+			 */
+	}
 	h1{
 		margin-bottom: 55px;
 	}

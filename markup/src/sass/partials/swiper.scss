@@ -6,7 +6,9 @@
 $swiper-pagination-bullet-size: 16px;
 
 .swiper{
-
+	:focus{
+		outline-style: none;
+	}
 	position: relative;
 
 	.swiper-container{
