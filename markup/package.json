@@ -52,11 +52,14 @@
     "rigger": "^1.0.1",
     "rimraf": "^3.0.0",
     "static-eval": "^2.0.2",
-    "uglify-js": "^3.6.1"
+    "uglify-js": "^3.6.1",
+    "webpack-stream": "^5.2.1"
   },
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "bootstrap": "^4.3.1",
     "bootstrap-scss": "^4.3.1",
+    "color": "^3.1.2",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0",
     "swiper": "^5.1.0"

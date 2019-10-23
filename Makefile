@@ -10,6 +10,8 @@ npm-build:
 pull:
 	git pull
 
-deploy: pull npm-i npm-build
+deploy: nvm-version pull npm-i npm-build
 
-
+# as root
+nvm-version:
+	nvm use v12.12.0
