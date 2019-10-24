@@ -1,9 +1,14 @@
-## Markup
+## webpack build
 
 - node version: v12.12.0
-- gulp: 4
+- webpack build
+- uploaded "as is"
+- dev still broken
 
-## deploy markup
+## start
 ```
-make deploy
+cd markup
+npm i
+npm run build
+serve -s build
 ```
