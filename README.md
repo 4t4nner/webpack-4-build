@@ -4,6 +4,7 @@
 - webpack build
 - uploaded "as is"
 - dev still broken
+- fontawesome still broken
 
 ## start
 ```

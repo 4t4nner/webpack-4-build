@@ -1,0 +1,26 @@
+@font-face {
+	font-family: "icons";
+	src: url("../fonts/icon-font-generator/icons.eot") format("embedded-opentype"), // from /src/sass
+	url("../fonts/icon-font-generator/icons.woff2") format("woff2"),
+	url("../fonts/icon-font-generator/icons.woff") format("woff"),
+	url("../fonts/icon-font-generator/icons.ttf") format("truetype");
+}
+
+i[class^="f-icon-"]:before, i[class*=" f-icon-"]:before {
+	font-family: icons !important;
+	font-style: normal;
+	font-weight: normal !important;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.f-icon-fa-map-marker-alt:before {
+	content: "\f101";
+}
+
+.f-icon-fa-plus-circle:before {
+	content: "\f102";
+}

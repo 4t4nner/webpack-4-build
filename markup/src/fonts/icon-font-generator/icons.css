@@ -1,9 +1,9 @@
 @font-face {
     font-family: "icons";
-    src: url("/assets/fonts/icon-font-generator/icons.eot?d66a92dae25c898af45060ecd39bcb49?#iefix") format("embedded-opentype"),
-url("/assets/fonts/icon-font-generator/icons.woff2?d66a92dae25c898af45060ecd39bcb49") format("woff2"),
-url("/assets/fonts/icon-font-generator/icons.woff?d66a92dae25c898af45060ecd39bcb49") format("woff"),
-url("/assets/fonts/icon-font-generator/icons.ttf?d66a92dae25c898af45060ecd39bcb49") format("truetype");
+    src: url("./icons.eot?d66a92dae25c898af45060ecd39bcb49?#iefix") format("embedded-opentype"),
+url("./icons.woff2?d66a92dae25c898af45060ecd39bcb49") format("woff2"),
+url("./icons.woff?d66a92dae25c898af45060ecd39bcb49") format("woff"),
+url("./icons.ttf?d66a92dae25c898af45060ecd39bcb49") format("truetype");
 }
 
 i[class^="f-icon-"]:before, i[class*=" f-icon-"]:before {
